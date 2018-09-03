@@ -10,7 +10,7 @@ Por padrão, o comando apenas mostra no terminal o nome do aluno, o papel que te
 
     usage: certi-finder [-h] [-v] [-w] [-s SEPARADOR] *Seu nome*
 
-    Baixa os certificados de participação da utfpr.
+	Lista os certificados de participação da utfpr.
 
     positional arguments:
       nome                  Nome a ser pesquisado
