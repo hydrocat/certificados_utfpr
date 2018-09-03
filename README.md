@@ -55,11 +55,15 @@ Dependencias
 1. É necessário ter o Firefox intalado (Testado na versão 61.0.1)
 2. Selenium, para controlar o firefox 
 
-> sudo pip install -U selenium
+```bash
+$ sudo pip install -U selenium
+```
 
 3. Se quiser usar o **parallel**, precisa instalar também.
 
-> sudo pacman -S parallel #no arch linux
+```bash
+$ sudo pacman -S parallel #no arch linux
+```
 
 A fazer
 -------
@@ -73,6 +77,8 @@ Os dados vem do site http://apl.utfpr.edu.br/extensao/certificados/listaPublica
 Para você se divertir
 -----
 
-> python3 -u certi-finder.py "" | grep -o '[^,]*$' | tee /dev/stderr | parallel -j 500% wget -q
+```bash
+$ python3 -u certi-finder.py "" | grep -o '[^,]*$' | tee /dev/stderr | parallel -j 500% wget -q
+```
 
-baixa todos os certificados de todo mundo, ótimo para encher o HD
+> baixa todos os certificados de todo mundo, ótimo para encher o HD
