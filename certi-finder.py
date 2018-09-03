@@ -30,7 +30,6 @@ headless = not results.watch
 def get_element_by_name(name):
     """Eu acho essa linha muito grande entao fiz uma funçao"""
     return wait.until(expected.visibility_of_element_located((By.NAME,name)))
-    
 
 def get_element_by_id(id):
     """mesma que get_element_by_name"""
@@ -40,7 +39,9 @@ def print_verbose(*args,**kwargs):
     if verbose:
         print(*args,**kwargs)
 
+
 #Inicio da busca
+nomeEntrado = False
 options = Options()
 options.add_argument('-headless')
 print_verbose("Iniciando Navegador")
@@ -76,13 +77,15 @@ for ano in anos:
         comboEvento.select_by_visible_text(evento)
 
         #pesquisa nome
-        campoPesquisa = get_element_by_id("txtPesquisa")
-        campoPesquisa.clear()
-        campoPesquisa.send_keys( nome )
-        campoPesquisa.submit()
+        if not nomeEntrado:
+            campoPesquisa = get_element_by_id("txtPesquisa")
+            campoPesquisa.clear()
+            campoPesquisa.send_keys( nome )
+            campoPesquisa.submit()
+            sleep(0.8)
+            nomeEntrado = True
 
         #processa a tabela
-        sleep(0.8)
         elementoTabela = get_element_by_id("data_table")
         for row in elementoTabela.find_elements_by_tag_name("tr")[1:]:
             cells = row.find_elements_by_tag_name("td")
