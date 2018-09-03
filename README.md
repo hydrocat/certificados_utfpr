@@ -60,10 +60,16 @@ Dependencias
 ------------
 
 1. É necessário ter o Firefox intalado (Testado na versão 61.0.1)
-2. Selenium, para controlar o firefox 
+2. Selenium, para controlar um navegador
 
 ```bash
 $ sudo pip install -U selenium
+```
+
+3. GeckoDriver para ligar o selenium no firefox
+
+```bash
+$ sudo pacman -S geckodriver
 ```
 
 3. Se quiser usar o **parallel**, precisa instalar também.
