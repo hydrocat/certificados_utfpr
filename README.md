@@ -25,7 +25,9 @@ Por padrão, o comando apenas mostra no terminal o nome do aluno, o papel que te
 Como baixar os certificados
 ------
 
-`python -u certi-finder.py "hydrocat" | grep -o '[^,]*$' | xargs wget -q`
+```bash
+python -u certi-finder.py "hydrocat" | grep -o '[^,]*$' | xargs wget -q
+```
 
 Se você tiver muitos certificados, baixe em paralelo:
 
