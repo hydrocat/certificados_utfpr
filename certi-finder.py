@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/bin/python3 -u
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as expected
@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 import getopt
-import sys
 import argparse
 
 #Lida com argumentos

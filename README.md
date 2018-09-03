@@ -45,8 +45,15 @@ $ python3 -u certi-finder.py "aline" | grep -o '[^,]*$' | parallel -j 500% wget 
 
 Se quiser acompanhar a o processo, pode também usar:
 
+
 ```bash
-$ python3 -u certi-finder.py "joao" | grep -o '[^,]*$' | parallel -j 500% --bar wget -q
+$ python3 -u certi-finder.py "joao" | grep --line-buffered -o '[^,]*$' | tee /dev/stderr | xargs -P 20 -n 1 wget -q
+```
+
+ou
+
+```bash
+$ python3 -u certi-finder.py "joao" | grep --line-buffered -o '[^,]*$' | parallel -j 500% --bar wget -q
 ```
 
 Dependencias
