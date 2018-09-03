@@ -2,7 +2,7 @@
 
 ## Buscador de certificados da UTFPr na linha de comando.
 
-Eu queria pegar todos os meus certificados da utf para checar minha atividades complementares mas eu não sabia o que eu tinha participado então eu e um colega fizemos esse scraper que checa todos eventos de todos os anos (>2014).
+Eu queria pegar todos os meus certificados da utf para checar minha atividades complementares mas eu não sabia o que eu tinha participado então eu e um colega fizemos esse scraper que checa todos eventos de todos os anos (>2013).
 
 Por padrão, o comando apenas mostra no terminal o nome do aluno, o papel que teve no evento e o link do documento. Logo abaixo tem um comando para baixar os documentos também.
 
