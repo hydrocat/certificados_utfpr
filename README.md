@@ -8,19 +8,19 @@ Por padrão, o comando apenas mostra no terminal o nome do aluno, o papel que te
 
 ## Como usar
 
-usage: certi-finder [-h] [-v] [-w] [-s SEPARADOR] *Seu nome*
+    usage: certi-finder [-h] [-v] [-w] [-s SEPARADOR] *Seu nome*
 
-Baixa os certificados de participação da utfpr.
+    Baixa os certificados de participação da utfpr.
 
-positional arguments:
-  nome                  Nome a ser pesquisado
+    positional arguments:
+      nome                  Nome a ser pesquisado
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -v, --verbose         Ativa saída prolixa (fala muito)
-  -w, --watch           Inicia o navegador ~Com cabeça~
-  -s SEPARADOR, --separador SEPARADOR
-                        Define o separador dos campos (default: ,)
+    optional arguments:
+      -h, --help            show this help message and exit
+      -v, --verbose         Ativa saída prolixa (fala muito)
+      -w, --watch           Inicia o navegador ~Com cabeça~
+      -s SEPARADOR, --separador SEPARADOR
+                            Define o separador dos campos (default: ,)
 
 Como baixar os certificados
 ------
