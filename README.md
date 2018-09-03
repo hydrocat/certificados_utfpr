@@ -26,16 +26,28 @@ Como baixar os certificados
 ------
 
 ```bash
-python -u certi-finder.py "hydrocat" | grep -o '[^,]*$' | xargs wget -q
+$ python3 -u certi-finder.py "domingos" | grep -o '[^,]*$' | xargs wget -q
 ```
 
 Se você tiver muitos certificados, baixe em paralelo:
 
-> python3 -u certi-finder.py "hydrocat" | grep -o '[^,]*$' | parallel -j 500% wget -q
+```bash
+$ python3 -u certi-finder.py "domingos" | grep -o '[^,]*$' | xargs -n 1 -P 20 wget -q
+```
+
+>  Nota que o terminal vai ficar limpo por causa da flag **-q**. 
+
+ou com o *gnu parallel*:
+
+```bash
+$ python3 -u certi-finder.py "aline" | grep -o '[^,]*$' | parallel -j 500% wget -q
+```
 
 Se quiser acompanhar a o processo, pode também usar:
 
-> python3 -u certi-finder.py | grep -o '[^,]*$' | parallel -j 500% --bar wget -q
+```bash
+$ python3 -u certi-finder.py "joao" | grep -o '[^,]*$' | parallel -j 500% --bar wget -q
+```
 
 Dependencias
 ------------
