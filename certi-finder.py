@@ -4,6 +4,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as expected
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from time import sleep
 import getopt
 import argparse
@@ -43,6 +44,8 @@ def print_verbose(*args,**kwargs):
 nomeEntrado = False
 options = Options()
 options.add_argument('-headless')
+caps = DesiredCapabilities.FIREFOX
+caps['marionette'] = True
 print_verbose("Iniciando Navegador")
 driver = webdriver.Firefox(firefox_options=options) if headless else webdriver.Firefox()
 
